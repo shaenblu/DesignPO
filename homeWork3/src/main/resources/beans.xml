@@ -10,8 +10,12 @@
     <bean id="DummyParser" class="com.company.DummyParser"/>
     <bean id="TradesJob" class="com.company.TradesJob" init-method="run">
         <constructor-arg ref="tradesDAO"></constructor-arg>
+        <constructor-arg ref="dd"></constructor-arg>
+        <constructor-arg ref="s"></constructor-arg>
     </bean>
     <bean id="tradesDAO" class="com.company.TradesDAO"/>
+    <bean id="dd" class="com.company.DummyDownloader"/>
+    <bean id="s" class="com.company.DummyParser"/>
 </beans>
 
 
